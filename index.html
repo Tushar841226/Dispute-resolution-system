@@ -327,311 +327,454 @@
             </div>
             
             <!-- Step 3: Jury Selection (Hidden by default) -->
-            <div id="step3" class="bg-white shadow rounded-lg p-6 hidden">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-xl font-semibold text-gray-900">Jury Member Selection</h2>
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
-                        Staking Required
-                    </span>
-                </div>
-                
-                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-                    <div class="flex">
-                        <div class="flex-shrink-0">
-                            <i class="fas fa-coins text-yellow-400"></i>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm text-yellow-700">
-                                To proceed, you need to select 3 jurors and stake 25 DRC tokens per juror. These tokens will be returned if the jurors reach a fair decision, or slashed if misconduct is detected.
-                            </p>
+<div id="step3" class="bg-white shadow rounded-lg p-6 hidden">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-semibold text-gray-900">Jury Member Selection</h2>
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+            Staking Required
+        </span>
+    </div>
+
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+        <div class="flex">
+            <div class="flex-shrink-0">
+                <i class="fas fa-coins text-yellow-400"></i>
+            </div>
+            <div class="ml-3">
+                <p class="text-sm text-yellow-700">
+                    To proceed, you need to select 3 jurors and stake 25 DRC tokens per juror. These tokens will be returned if the jurors reach a fair decision, or slashed if misconduct is detected.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-6">
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Available Jurors</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Juror 1 -->
+            <div class="juror-card border rounded-lg p-4 transition cursor-pointer">
+                <div class="flex items-center mb-3">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
+                        <span class="text-indigo-600 font-medium">JD</span>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm font-medium text-gray-900">Jane Doe</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            <span class="text-xs text-gray-500 ml-1">4.8 (42 cases)</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="mb-6">
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Available Jurors</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <!-- Juror 1 -->
-                        <div class="juror-card border rounded-lg p-4 transition cursor-pointer">
-                            <div class="flex items-center mb-3">
-                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
-                                    <span class="text-indigo-600 font-medium">JD</span>
-                                </div>
-                                <div class="ml-3">
-                                    <p class="text-sm font-medium text-gray-900">Jane Doe</p>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <span class="text-xs text-gray-500 ml-1">4.8 (42 cases)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex justify-between text-xs text-gray-500 mb-2">
-                                <span>Specialty: Design</span>
-                                <span>Success: 92%</span>
-                            </div>
-                            <p class="text-xs text-gray-500 mb-3">"I focus on whether deliverables match the agreed specifications and professional standards."</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-medium text-indigo-600">25 DRC stake</span>
-                                <button class="text-xs px-2 py-1 bg-indigo-50 text-indigo-700 rounded hover:bg-indigo-100">
-                                    Select Juror
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Juror 2 -->
-                        <div class="juror-card border rounded-lg p-4 transition cursor-pointer">
-                            <div class="flex items-center mb-3">
-                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
-                                    <span class="text-indigo-600 font-medium">AS</span>
-                                </div>
-                                <div class="ml-3">
-                                    <p class="text-sm font-medium text-gray-900">Alex Smith</p>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <span class="text-xs text-gray-500 ml-1">4.6 (37 cases)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex justify-between text-xs text-gray-500 mb-2">
-                                <span>Specialty: Development</span>
-                                <span>Success: 89%</span>
-                            </div>
-                            <p class="text-xs text-gray-500 mb-3">"I look for clear communication and documentation of any scope changes."</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-medium text-indigo-600">25 DRC stake</span>
-                                <button class="text-xs px-2 py-1 bg-indigo-50 text-indigo-700 rounded hover:bg-indigo-100">
-                                    Select Juror
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Juror 3 -->
-                        <div class="juror-card border rounded-lg p-4 transition cursor-pointer">
-                            <div class="flex items-center mb-3">
-                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
-                                    <span class="text-indigo-600 font-medium">MJ</span>
-                                </div>
-                                <div class="ml-3">
-                                    <p class="text-sm font-medium text-gray-900">Maria Johnson</p>
-                                    <div class="flex items-center">
-                                        <i class="fas fa-star text-yellow-400 text-xs"></i>
-                                        <span class="text-xs text-gray-500 ml-1">4.9 (56 cases)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex justify-between text-xs text-gray-500 mb-2">
-                                <span>Specialty: Project Mgmt</span>
-                                <span>Success: 95%</span>
-                            </div>
-                            <p class="text-xs text-gray-500 mb-3">"I evaluate whether both parties acted in good faith throughout the engagement."</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-medium text-indigo-600">25 DRC stake</span>
-                                <button class="text-xs px-2 py-1 bg-indigo-50 text-indigo-700 rounded hover:bg-indigo-100">
-                                    Select Juror
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex justify-between text-xs text-gray-500 mb-2">
+                    <span>Specialty: Design</span>
+                    <span>Success: 92%</span>
                 </div>
-                
-                <!-- Selected Jurors -->
-                <div class="mb-6">
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Your Selected Jurors</h3>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-sm text-gray-500">Jurors selected:</span>
-                            <span class="text-sm font-medium">0 of 3</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">Total stake required:</span>
-                            <span class="text-sm font-medium">0 DRC</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Navigation -->
-                <div class="flex justify-between">
-                    <button onclick="prevStep()" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Back
+                <p class="text-xs text-gray-500 mb-3">"I focus on whether deliverables match the agreed specifications and professional standards."</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-medium text-indigo-600">25 DRC stake</span>
+                    <button class="text-xs px-2 py-1 bg-indigo-50 text-indigo-700 rounded hover:bg-indigo-100 select-juror-btn">
+                        Select Juror
                     </button>
-                    <button class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 opacity-50 cursor-not-allowed" disabled>
-                        Confirm Jurors & Stake Tokens
+                </div>
+            </div>
+
+            <!-- Juror 2 -->
+            <div class="juror-card border rounded-lg p-4 transition cursor-pointer">
+                <div class="flex items-center mb-3">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
+                        <span class="text-indigo-600 font-medium">AS</span>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm font-medium text-gray-900">Alex Smith</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            <span class="text-xs text-gray-500 ml-1">4.6 (37 cases)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between text-xs text-gray-500 mb-2">
+                    <span>Specialty: Development</span>
+                    <span>Success: 89%</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-3">"I look for clear communication and documentation of any scope changes."</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-medium text-indigo-600">25 DRC stake</span>
+                    <button class="text-xs px-2 py-1 bg-indigo-50 text-indigo-700 rounded hover:bg-indigo-100 select-juror-btn">
+                        Select Juror
                     </button>
+                </div>
+            </div>
+
+            <!-- Juror 3 -->
+            <div class="juror-card border rounded-lg p-4 transition cursor-pointer">
+                <div class="flex items-center mb-3">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
+                        <span class="text-indigo-600 font-medium">MJ</span>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm font-medium text-gray-900">Maria Johnson</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 text-xs"></i>
+                            <span class="text-xs text-gray-500 ml-1">4.9 (56 cases)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between text-xs text-gray-500 mb-2">
+                    <span>Specialty: Project Mgmt</span>
+                    <span>Success: 95%</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-3">"I evaluate whether both parties acted in good faith throughout the engagement."</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-medium text-indigo-600">25 DRC stake</span>
+                    <button class="text-xs px-2 py-1 bg-indigo-50 text-indigo-700 rounded hover:bg-indigo-100 select-juror-btn">
+                        Select Juror
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selected Jurors -->
+    <div class="mb-6">
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Your Selected Jurors</h3>
+        <div class="bg-gray-50 rounded-lg p-4">
+            <div class="flex items-center justify-between mb-2">
+                <span class="text-sm text-gray-500">Jurors selected:</span>
+                <span class="text-sm font-medium" id="juror-count">0 of 3</span>
+            </div>
+            <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">Total stake required:</span>
+                <span class="text-sm font-medium" id="total-stake">0 DRC</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex justify-between">
+        <button onclick="prevStep()" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Back
+        </button>
+        <button id="confirm-btn" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 opacity-50 cursor-not-allowed" disabled>
+            Confirm Jurors & Stake Tokens
+        </button>
+    </div>
+</div>
+
+<!-- ✅ JavaScript to handle juror selection -->
+<script>
+    const maxJurors = 3;
+    let selectedJurors = [];
+
+    const jurorButtons = document.querySelectorAll('.select-juror-btn');
+    const confirmBtn = document.getElementById('confirm-btn');
+    const jurorCount = document.getElementById('juror-count');
+    const totalStake = document.getElementById('total-stake');
+
+    jurorButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+            const card = this.closest('.juror-card');
+            const name = card.querySelector('p.text-sm.font-medium').innerText;
+
+            if (selectedJurors.includes(name)) {
+                // Deselect juror
+                selectedJurors = selectedJurors.filter(j => j !== name);
+                card.classList.remove('border-indigo-600', 'bg-indigo-50');
+                this.innerText = "Select Juror";
+            } else {
+                if (selectedJurors.length >= maxJurors) {
+                    alert("You can only select up to 3 jurors.");
+                    return;
+                }
+                // Select juror
+                selectedJurors.push(name);
+                card.classList.add('border-indigo-600', 'bg-indigo-50');
+                this.innerText = "Deselect Juror";
+            }
+
+            // Update count and stake
+            jurorCount.innerText = `${selectedJurors.length} of 3`;
+            totalStake.innerText = `${selectedJurors.length * 25} DRC`;
+
+            // Enable or disable confirm button
+            if (selectedJurors.length === 3) {
+                confirmBtn.disabled = false;
+                confirmBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            } else {
+                confirmBtn.disabled = true;
+                confirmBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        });
+    });
+    // ✅ Confirm button logic — add your logic here!
+    confirmBtn.addEventListener('click', () => {
+        if (selectedJurors.length !== 3) {
+            alert("Please select 3 jurors before confirming.");
+            return;
+        }
+
+        // Example logic: Show confirmation and proceed
+        console.log("Selected Jurors:", selectedJurors);
+        alert(`Jurors confirmed:\n${selectedJurors.join(', ')}\n\n75 DRC staked.`);
+
+        
+        nextStep(); 
+    });
+</script>
+<!-- Step 4: Jury Voting (Hidden by default) -->
+<div id="step4" class="bg-white shadow rounded-lg p-6 hidden">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-semibold text-gray-900">Jury Voting</h2>
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+            Active
+        </span>
+    </div>
+    
+    <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+        <div class="flex">
+            <div class="flex-shrink-0">
+                <i class="fas fa-check-circle text-green-400"></i>
+            </div>
+            <div class="ml-3">
+                <p class="text-sm text-green-700" id="voting-timer">
+                    Your jurors have been selected and staking is complete. The voting period is now active for 2:00 minutes.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tabs -->
+    <div class="border-b border-gray-200 mb-6">
+        <nav class="-mb-px flex space-x-8">
+            <button onclick="switchTab('evidence')" class="tab-button border-indigo-500 text-indigo-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                Evidence
+            </button>
+            <button onclick="switchTab('chat')" class="tab-button border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                Chat History
+            </button>
+            <button onclick="switchTab('ai')" class="tab-button border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                AI Analysis
+            </button>
+        </nav>
+    </div>
+    
+    <!-- Tab Content -->
+    <div id="evidence-tab" class="tab-content">
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Submitted Evidence</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <!-- Client Evidence -->
+            <div class="border rounded-lg p-4">
+                <h4 class="text-sm font-medium text-gray-900 mb-2">Client's Evidence</h4>
+                <div class="space-y-2">
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-file-image text-blue-500 mr-2"></i>
+                        <span>scope_comparison.png</span>
+                    </div>
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                        <span>contract_terms.pdf</span>
+                    </div>
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-file-word text-blue-600 mr-2"></i>
+                        <span>client_expectations.docx</span>
+                    </div>
                 </div>
             </div>
             
-            <!-- Step 4: Jury Voting (Hidden by default) -->
-            <div id="step4" class="bg-white shadow rounded-lg p-6 hidden">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-xl font-semibold text-gray-900">Jury Voting</h2>
-                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
-                        Active
-                    </span>
-                </div>
-                
-                <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
-                    <div class="flex">
-                        <div class="flex-shrink-0">
-                            <i class="fas fa-check-circle text-green-400"></i>
-                        </div>
-                        <div class="ml-3">
-                            <p class="text-sm text-green-700">
-                                Your jurors have been selected and staking is complete. The voting period is now active for 48 hours.
-                            </p>
-                        </div>
+            <!-- Freelancer Evidence -->
+            <div class="border rounded-lg p-4">
+                <h4 class="text-sm font-medium text-gray-900 mb-2">Freelancer's Evidence</h4>
+                <div class="space-y-2">
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-file-image text-blue-500 mr-2"></i>
+                        <span>delivered_work.png</span>
                     </div>
-                </div>
-                
-                <!-- Tabs -->
-                <div class="border-b border-gray-200 mb-6">
-                    <nav class="-mb-px flex space-x-8">
-                        <button onclick="switchTab('evidence')" class="tab-button border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm active">
-                            Evidence
-                        </button>
-                        <button onclick="switchTab('chat')" class="tab-button border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                            Chat History
-                        </button>
-                        <button onclick="switchTab('ai')" class="tab-button border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                            AI Analysis
-                        </button>
-                    </nav>
-                </div>
-                
-                <!-- Tab Content -->
-                <div id="evidence-tab" class="tab-content active">
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Submitted Evidence</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                        <!-- Client Evidence -->
-                        <div class="border rounded-lg p-4">
-                            <h4 class="text-sm font-medium text-gray-900 mb-2">Client's Evidence</h4>
-                            <div class="space-y-2">
-                                <div class="flex items-center text-sm">
-                                    <i class="fas fa-file-image text-blue-500 mr-2"></i>
-                                    <span>scope_comparison.png</span>
-                                </div>
-                                <div class="flex items-center text-sm">
-                                    <i class="fas fa-file-pdf text-red-500 mr-2"></i>
-                                    <span>contract_terms.pdf</span>
-                                </div>
-                                <div class="flex items-center text-sm">
-                                    <i class="fas fa-file-word text-blue-600 mr-2"></i>
-                                    <span>client_expectations.docx</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Freelancer Evidence -->
-                        <div class="border rounded-lg p-4">
-                            <h4 class="text-sm font-medium text-gray-900 mb-2">Freelancer's Evidence</h4>
-                            <div class="space-y-2">
-                                <div class="flex items-center text-sm">
-                                    <i class="fas fa-file-image text-blue-500 mr-2"></i>
-                                    <span>delivered_work.png</span>
-                                </div>
-                                <div class="flex items-center text-sm">
-                                    <i class="fas fa-file-pdf text-red-500 mr-2"></i>
-                                    <span>client_approval.pdf</span>
-                                </div>
-                                <div class="flex items-center text-sm">
-                                    <i class="fas fa-file-alt text-gray-600 mr-2"></i>
-                                    <span>scope_clarification.txt</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                        <span>client_approval.pdf</span>
                     </div>
-                </div>
-                
-                <div id="chat-tab" class="tab-content">
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Relevant Chat History</h3>
-                    <div class="border rounded-lg p-4 h-64 overflow-y-auto bg-gray-50">
-                        <div class="space-y-2">
-                            <div class="chat-bubble sender">
-                                <div class="text-xs font-semibold mb-1">Client • 2 days ago</div>
-                                <div>The final deliverable doesn't match what we agreed in the contract.</div>
-                            </div>
-                            <div class="chat-bubble receiver">
-                                <div class="text-xs font-semibold mb-1">Freelancer • 2 days ago</div>
-                                <div>I delivered exactly what was in the scope. Can you point out specific issues?</div>
-                            </div>
-                            <div class="chat-bubble sender">
-                                <div class="text-xs font-semibold mb-1">Client • 1 day ago</div>
-                                <div>Here are screenshots showing the differences from the mockups we approved.</div>
-                            </div>
-                            <div class="chat-bubble receiver">
-                                <div class="text-xs font-semibold mb-1">Freelancer • 1 day ago</div>
-                                <div>Those were minor adjustments we discussed. The core functionality is all there.</div>
-                            </div>
-                        </div>
+                    <div class="flex items-center text-sm">
+                        <i class="fas fa-file-alt text-gray-600 mr-2"></i>
+                        <span>scope_clarification.txt</span>
                     </div>
-                </div>
-                
-                <div id="ai-tab" class="tab-content">
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">AI Moderation Summary</h3>
-                    <div class="bg-blue-50 p-4 rounded-lg mb-4">
-                        <p class="text-sm text-blue-700">
-                            The AI analysis suggests this is primarily a scope misalignment issue, with some communication gaps about mid-project changes. The original contract lacks detailed specifications, making it harder to evaluate compliance.
-                        </p>
-                    </div>
-                    <h4 class="text-md font-medium text-gray-900 mb-2">Suggested Questions for Consideration</h4>
-                    <ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 mb-4">
-                        <li>Does the delivered work substantially match the original agreement?</li>
-                        <li>Were any scope changes properly documented and agreed upon?</li>
-                        <li>Is the quality of work consistent with professional standards?</li>
-                    </ul>
-                </div>
-                
-                <!-- Voting Options -->
-                <div class="mt-8">
-                    <h3 class="text-lg font-medium text-gray-900 mb-3">Cast Your Vote</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                        <div onclick="selectVote('client')" class="vote-option border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer transition">
-                            <div class="flex justify-center mb-2">
-                                <div class="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center">
-                                    <i class="fas fa-user-tie text-red-500 text-xl"></i>
-                                </div>
-                            </div>
-                            <h4 class="font-medium text-gray-900">Client Wins</h4>
-                            <p class="text-xs text-gray-500 mt-1">Full refund to client</p>
-                        </div>
-                        
-                        <div onclick="selectVote('freelancer')" class="vote-option border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer transition">
-                            <div class="flex justify-center mb-2">
-                                <div class="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center">
-                                    <i class="fas fa-code text-green-500 text-xl"></i>
-                                </div>
-                            </div>
-                            <h4 class="font-medium text-gray-900">Freelancer Wins</h4>
-                            <p class="text-xs text-gray-500 mt-1">Full payment to freelancer</p>
-                        </div>
-                        
-                        <div onclick="selectVote('split')" class="vote-option border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer transition">
-                            <div class="flex justify-center mb-2">
-                                <div class="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center">
-                                    <i class="fas fa-divide text-purple-500 text-xl"></i>
-                                </div>
-                            </div>
-                            <h4 class="font-medium text-gray-900">Split Decision</h4>
-                            <p class="text-xs text-gray-500 mt-1">Partial refund/payment</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Reasoning -->
-                    <div class="mb-6">
-                        <h3 class="text-lg font-medium text-gray-900 mb-3">Reasoning (Optional)</h3>
-                        <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" rows="3" placeholder="Explain your decision to help the parties understand the outcome (visible to all after voting completes)"></textarea>
-                    </div>
-                </div>
-                
-                <!-- Navigation -->
-                <div class="flex justify-between">
-                    <button onclick="prevStep()" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                        Back
-                    </button>
-                    <button class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 opacity-50 cursor-not-allowed" disabled>
-                        Submit Vote
-                    </button>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <div id="chat-tab" class="tab-content hidden">
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Relevant Chat History</h3>
+        <div class="border rounded-lg p-4 h-64 overflow-y-auto bg-gray-50">
+            <div class="space-y-2">
+                <div class="chat-bubble sender">
+                    <div class="text-xs font-semibold mb-1">Client • 2 days ago</div>
+                    <div>The final deliverable doesn't match what we agreed in the contract.</div>
+                </div>
+                <div class="chat-bubble receiver">
+                    <div class="text-xs font-semibold mb-1">Freelancer • 2 days ago</div>
+                    <div>I delivered exactly what was in the scope. Can you point out specific issues?</div>
+                </div>
+                <div class="chat-bubble sender">
+                    <div class="text-xs font-semibold mb-1">Client • 1 day ago</div>
+                    <div>Here are screenshots showing the differences from the mockups we approved.</div>
+                </div>
+                <div class="chat-bubble receiver">
+                    <div class="text-xs font-semibold mb-1">Freelancer • 1 day ago</div>
+                    <div>Those were minor adjustments we discussed. The core functionality is all there.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="ai-tab" class="tab-content hidden">
+        <h3 class="text-lg font-medium text-gray-900 mb-3">AI Moderation Summary</h3>
+        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+            <p class="text-sm text-blue-700">
+                The AI analysis suggests this is primarily a scope misalignment issue, with some communication gaps about mid-project changes. The original contract lacks detailed specifications, making it harder to evaluate compliance.
+            </p>
+        </div>
+        <h4 class="text-md font-medium text-gray-900 mb-2">Suggested Questions for Consideration</h4>
+        <ul class="list-disc pl-5 space-y-1 text-sm text-gray-700 mb-4">
+            <li>Does the delivered work substantially match the original agreement?</li>
+            <li>Were any scope changes properly documented and agreed upon?</li>
+            <li>Is the quality of work consistent with professional standards?</li>
+        </ul>
+    </div>
+    
+    <!-- Voting Options -->
+    <div class="mt-8">
+        <h3 class="text-lg font-medium text-gray-900 mb-3">Cast Your Vote</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div id="client-vote" onclick="selectVote('client')" class="vote-option border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer transition hover:border-red-400">
+                <div class="flex justify-center mb-2">
+                    <div class="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-red-500 text-xl"></i>
+                    </div>
+                </div>
+                <h4 class="font-medium text-gray-900">Client Wins</h4>
+                <p class="text-xs text-gray-500 mt-1">Full refund to client</p>
+            </div>
+            
+            <div id="freelancer-vote" onclick="selectVote('freelancer')" class="vote-option border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer transition hover:border-green-400">
+                <div class="flex justify-center mb-2">
+                    <div class="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-code text-green-500 text-xl"></i>
+                    </div>
+                </div>
+                <h4 class="font-medium text-gray-900">Freelancer Wins</h4>
+                <p class="text-xs text-gray-500 mt-1">Full payment to freelancer</p>
+            </div>
+            
+            <div id="split-vote" onclick="selectVote('split')" class="vote-option border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer transition hover:border-purple-400">
+                <div class="flex justify-center mb-2">
+                    <div class="h-12 w-12 rounded-full bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-divide text-purple-500 text-xl"></i>
+                    </div>
+                </div>
+                <h4 class="font-medium text-gray-900">Split Decision</h4>
+                <p class="text-xs text-gray-500 mt-1">Partial refund/payment</p>
+            </div>
+        </div>
+        
+        <!-- Reasoning -->
+        <div class="mb-6">
+            <h3 class="text-lg font-medium text-gray-900 mb-3">Reasoning (Optional)</h3>
+            <textarea id="vote-reasoning" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" rows="3" placeholder="Explain your decision to help the parties understand the outcome (visible to all after voting completes)"></textarea>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <div class="flex justify-between">
+        <button onclick="prevStep()" class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Back
+        </button>
+        <button id="submit-vote-btn" onclick="submitVote()" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Submit Vote
+        </button>
+    </div>
+</div>
+
+<script>
+// Voting System
+let selectedVote = null;
+let timeLeft = 120; // 2 minutes in seconds
+let voteTimer;
+
+// Initialize when step4 becomes visible
+function initVoting() {
+    startTimer();
+    document.getElementById('submit-vote-btn').disabled = true;
+}
+
+// Timer countdown
+function startTimer() {
+    const timerElement = document.getElementById('voting-timer');
+    voteTimer = setInterval(() => {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerElement.textContent = Your jurors have been selected and staking is complete. The voting period is now active for ${minutes}:${seconds.toString().padStart(2, '0')} minutes;
+
+        if (timeLeft <= 0) {
+            clearInterval(voteTimer);
+            disableVoting();
+            alert("Voting period has ended!");
+        }
+    }, 1000);
+}
+
+// Select vote option
+function selectVote(voteType) {
+    selectedVote = voteType;
+    document.querySelectorAll('.vote-option').forEach(option => {
+        option.classList.remove('border-indigo-500', 'bg-indigo-50');
+    });
+    document.getElementById(${voteType}-vote).classList.add('border-indigo-500', 'bg-indigo-50');
+    document.getElementById('submit-vote-btn').disabled = false;
+}
+
+// Submit vote
+function submitVote() {
+    if (!selectedVote) {
+        alert("Please select a vote option first!");
+        return;
+    }
+    
+    const reasoning = document.getElementById('vote-reasoning').value;
+    console.log(Vote submitted for ${selectedVote} with reasoning: ${reasoning});
+    alert("Vote submitted successfully!");
+    
+    // Disable after submission
+    disableVoting();
+    clearInterval(voteTimer);
+}
+
+// Disable voting interface
+function disableVoting() {
+    document.querySelectorAll('.vote-option, #submit-vote-btn').forEach(el => {
+        el.disabled = true;
+        el.classList.add('opacity-50', 'cursor-not-allowed');
+    });
+}
+
+// Tab switching
+function switchTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+    document.getElementById(${tabName}-tab).classList.remove('hidden');
+    
+    document.querySelectorAll('.tab-button').forEach(btn => {
+        btn.classList.remove('border-indigo-500', 'text-indigo-600');
+        btn.classList.add('border-transparent', 'text-gray-500');
+    });
+    
+    const activeBtn = document.querySelector([onclick="switchTab('${tabName}')"]);
+    activeBtn.classList.add('border-indigo-500', 'text-indigo-600');
+    activeBtn.classList.remove('border-transparent', 'text-gray-500');
+}
+
+// Call initVoting() when step4 is shown (e.g., from prevStep()/nextStep() functions)
+</script>
+
+           
             
             <!-- Step 5: Jury Results (Hidden by default) -->
             <div id="step5" class="bg-white shadow rounded-lg p-6 hidden">
